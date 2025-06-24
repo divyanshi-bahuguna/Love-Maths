@@ -1,0 +1,85 @@
+body {
+  font-family: 'Comic Sans MS', sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom, #333, #555);
+  color: #fff;
+}
+
+.hidden { display: none; }
+
+.card {
+  background: #f8f5ed;
+  color: #333;
+  margin: 2em auto;
+  padding: 2em;
+  border-radius: 1em;
+  max-width: 700px;
+  display: flex;
+  justify-content: space-between;
+}
+
+input, button {
+  display: block;
+  margin: 0.5em 0;
+  padding: 0.6em;
+  border-radius: 0.5em;
+  border: none;
+}
+
+button {
+  background: #c9b72c;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.classroom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.board {
+  background: #222;
+  color: white;
+  width: 80%;
+  padding: 2em;
+  margin: 1em;
+  text-align: center;
+  font-size: 1.5em;
+  border: 5px solid orange;
+}
+
+.magicBox {
+  background: #d08d34;
+  padding: 2em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  font-size: 2em;
+}
+
+.modal {
+  position: fixed;
+  top: 10%;
+  left: 25%;
+  background: #fff;
+  color: #333;
+  padding: 2em;
+  border-radius: 1em;
+  z-index: 10;
+}
+
+#levelsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 50px);
+  gap: 10px;
+  margin-top: 1em;
+}
+
+#levelsGrid button {
+  width: 50px;
+  height: 50px;
+  background: #333;
+  color: white;
+  border-radius: 0.5em;
+}
