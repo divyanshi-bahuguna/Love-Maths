@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ANKO Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Main Container -->
+  <div id="mainContainer">
+    <!-- Login/Register Section -->
+    <div id="authContainer" class="card">
+      <div id="loginSection">
+        <h1>ANKO</h1>
+        <p>Welcome back!</p>
+        <input type="email" id="loginEmail" placeholder="Email" />
+        <button onclick="login()">LOGIN</button>
+      </div>
+      <div id="registerSection">
+        <h2>New to Anko? Register Now</h2>
+        <input type="text" id="regName" placeholder="Tell us your name" />
+        <input type="number" id="regAge" placeholder="How old are you?" />
+        <input type="email" id="regEmail" placeholder="We need your email" />
+        <div class="gender">
+          <label><input type="radio" name="gender" value="Male" checked /> Male</label>
+          <label><input type="radio" name="gender" value="Female" /> Female</label>
+          <label><input type="radio" name="gender" value="NA" /> NA</label>
+        </div>
+        <p>Set a Difficulty Level</p>
+        <div class="difficulty">
+          <label><input type="radio" name="difficulty" value="beginner" checked /> 🐢 Beginner</label>
+          <label><input type="radio" name="difficulty" value="intermediate" /> 🐇 Intermediate</label>
+          <label><input type="radio" name="difficulty" value="advanced" /> 🐆 Advanced</label>
+        </div>
+        <button onclick="register()">REGISTER</button>
+      </div>
+    </div>
+
+    <!-- Classroom Game Section -->
+    <div id="gameContainer" class="hidden">
+      <header>
+        <span id="userGreeting"></span>
+        <span id="pointsDisplay">💰 <span id="points">0</span></span>
+        <span id="levelDisplay">🌟 Level <span id="level">0</span></span>
+        <progress id="progressBar" max="10" value="0"></progress>
+        <button onclick="openSettings()">⚙️</button>
+      </header>
+
+      <main>
+        <div class="classroom">
+          <div class="board" id="quizArea">Click the box for a quiz</div>
+          <div class="magicBox" onclick="generateQuiz()">📦</div>
+        </div>
+        <input type="text" id="answerInput" placeholder="Your answer..." class="hidden" />
+        <button onclick="submitAnswer()" class="hidden" id="submitBtn">Submit</button>
+        <p id="feedback"></p>
+      </main>
+    </div>
+
+    <!-- Settings Popup -->
+    <div id="settingsPopup" class="modal hidden">
+      <h3>Hello, <span id="settingsName"></span>!</h3>
+      <p>Set a Difficulty Level</p>
+      <div class="difficulty">
+        <label><input type="radio" name="difficultyPopup" value="beginner" /> 🐢</label>
+        <label><input type="radio" name="difficultyPopup" value="intermediate" /> 🐇</label>
+        <label><input type="radio" name="difficultyPopup" value="advanced" /> 🐆</label>
+      </div>
+      <p><button onclick="logout()">↩️ LogOut</button></p>
+      <p><button onclick="openLevels()">🎯 View Levels</button></p>
+    </div>
+
+    <!-- Levels Modal -->
+    <div id="levelsModal" class="modal hidden">
+      <h2>LEVELS</h2>
+      <div id="levelsGrid"></div>
+      <button onclick="closeLevels()">✖️</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
