@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+<div class="login-container">
+    <img src="assets/cartoon-avatar.png" alt="Avatar" class="avatar">
+    <h1>🎮 Welcome to QuizQuest!</h1>
+
+    <!-- Login Form -->
+    <div id="loginForm">
+        <input type="email" id="loginEmail" placeholder="📧 Enter Email">
+        <button onclick="login()">🚀 Login</button>
+        <p>New here? <span onclick="showRegister()">Register</span></p>
+    </div>
+
+    <!-- Register Form -->
+    <div id="registerForm" class="hidden">
+        <input type="text" id="regName" placeholder="👤 Name">
+        <input type="number" id="regAge" placeholder="🎂 Age">
+        <input type="email" id="regEmail" placeholder="📧 Email">
+        <div class="option-group">
+            <label><input type="radio" name="gender" value="Male"> ♂️ Male</label>
+            <label><input type="radio" name="gender" value="Female"> ♀️ Female</label>
+        </div>
+        <div class="option-group">
+            <label><input type="radio" name="difficulty" value="Easy"> 😊 Easy</label>
+            <label><input type="radio" name="difficulty" value="Medium"> 😎 Medium</label>
+            <label><input type="radio" name="difficulty" value="Hard"> 🤯 Hard</label>
+        </div>
+        <button onclick="register()">✅ Register</button>
+        <p>Already have an account? <span onclick="showLogin()">Login</span></p>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+

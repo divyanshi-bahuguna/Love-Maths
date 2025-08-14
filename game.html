@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="game-page">
+<header>
+    <h1>🧠 QuizQuest</h1>
+    <div class="user-info">
+        <span id="userGreeting"></span> | ⭐ Points: <span id="points"></span> | 🎯 Level: <span id="level"></span>
+        <button onclick="logout()">🚪 Logout</button>
+        <!-- New Question Button -->
+<button id="newQBtn">
+    <span class="dice">🎲</span> New Question
+</button>
+
+    </div>
+</header>
+
+<main>
+    <progress id="progressBar" max="10" value="0"></progress>
+    <div id="quizArea">Click "New Question" to start!</div>
+    <input type="text" id="answerInput" class="hidden" placeholder="✏️ Type your answer">
+    <button id="submitBtn" class="hidden" onclick="submitAnswer()">📤 Submit</button>
+    <p id="feedback"></p>
+    <button onclick="generateQuizFromAPI()">🎲 New Question</button>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
